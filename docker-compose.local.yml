@@ -1,0 +1,19 @@
+# Local Docker preview without Traefik:
+# docker compose -f docker-compose.local.yml up --build
+
+services:
+  desnomeia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: desnomeia-ltda:local
+    container_name: desnomeia-local
+    ports:
+      - "8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
+    security_opt:
+      - no-new-privileges:true

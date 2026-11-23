@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"><title>Desnomeia Ltda</title><g transform="translate(-9.6 -9.6) scale(1.075)">
+  <title id="title">Desnomeia — Sovereign Hex-D (v2)</title>
+  <g id="symbol">
+    <path fill="#111111" d="M 41.40 28.00 H 77.40 V 107.22 L 41.40 128.00 Z"/>
+    <path fill="#111111" d="M 41.40 148.78 L 77.40 128.00 V 228.00 H 41.40 Z"/>
+    <path fill="#111111" d="M 95.40 28.00 H 128.00 L 214.60 78.00 V 178.00 L 128.00 228.00 H 95.40 V 192.00 H 118.35 L 178.60 157.22 V 98.78 L 118.35 64.00 H 95.40 Z"/>
+  </g>
+</g></svg>

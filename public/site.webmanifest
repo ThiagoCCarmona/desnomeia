@@ -1,0 +1,27 @@
+{
+  "name": "Desnomeia Ltda",
+  "short_name": "Desnomeia",
+  "description": "Consultoria personalizada para registro de novos nomes. Não vendemos nomes, evitamos 18 anos de bullying.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

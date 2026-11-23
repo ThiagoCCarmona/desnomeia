@@ -1,0 +1,30 @@
+services:
+  desnomeia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: desnomeia-ltda:latest
+    container_name: desnomeia-web
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=${TRAEFIK_NETWORK:-traefik}"
+      - "traefik.http.routers.desnomeia.rule=Host(`${SITE_DOMAIN:-desnomeia.tccodes.com.br}`)"
+      - "traefik.http.routers.desnomeia.entrypoints=${TRAEFIK_ENTRYPOINT:-websecure}"
+      - "traefik.http.routers.desnomeia.tls=true"
+      - "traefik.http.routers.desnomeia.tls.certresolver=${TRAEFIK_CERTRESOLVER:-letsencrypt}"
+      - "traefik.http.services.desnomeia.loadbalancer.server.port=8080"
+
+networks:
+  traefik:
+    external: true
+    name: ${TRAEFIK_NETWORK:-traefik}
